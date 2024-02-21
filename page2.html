@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Websiteku</title>
+	<title>TutorLaravel</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -40,17 +40,22 @@
 					<span class="icon icon-bar"></span>
 					<span class="icon icon-bar"></span>
 				</button>
-				<a href="#" class="navbar-brand">Websiteku</a>
+				<a href="#" class="navbar-brand">TutorLaravel</a>
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="index.html">HOME</a></li>
+					<li><a href="#back">HOME</a></li>
 					<li><a href="#installation">INSTALLATION</a></li>
-					<li><a href="#team">TEAM</a></li>
+					<li><a href="#routing">ROUTING</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+	<br><br>
+	<section id="back">
+		<a data-scroll href="index.html" class="btn btn-default mx-3 wow fadeInUp" data-wow-offset="50"
+						data-wow-delay="0.6s">Kembali</a>
+	</section>
 	<section id="installation">
 		<div class="container">
 			<div class="row">
@@ -60,7 +65,7 @@
 				<div class="col-md-12 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
 					<div class="media">
 						<div class="media-heading-wrapper">
-							<h3 class="media-heading">Creating a Laravel Project</h3>
+							<h1 class="media-heading">Creating a Laravel Project</h1>
 						</div>
 						<br>
 						<div class="media-body">
@@ -137,22 +142,48 @@
 			</div>
 		</div>
 	</section>
-	<section id="team">
+	<br><br><br>
+	<section id="routing">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2 class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s"><span>AWESOME</span> FRIEND</h2>
+					<h2 class="wow bounceIn " data-wow-offset="50" data-wow-delay="0.3s">ROUTING</h2>
 				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 wow fadeIn" data-wow-offset="50" data-wow-delay="1.3s">
-					<div class="team-wrapper">
-						<img src="images/fimage1.jpg" class="img-responsive" alt="team img 1">
-						<div class="team-des">
-							<h4>FAUZI</h4>
-							<span>Friend</span>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et
-								laoreet phasellus ut nisi id leo molest.</p>
+				<div class="col-md-12 col-sm-12 col-xs-12 wow fadeInLeft" data-wow-offset="50" data-wow-delay="0.6s">
+					<div class="media">
+						<div class="media-heading-wrapper">
+							<h1 class="media-heading">Basic Routing</h1>
+						</div>
+						<br>
+						<div class="media-body">
+							<p>
+								The most basic Laravel routes accept a URI and a closure, providing a very simple and expressive method of defining routes and behavior without complicated routing configuration files:
+							</p>
+							
+							<div class="code-container">
+								<div class="relative code-block-wrapper"><pre><code data-theme="olaolu-palenight" data-lang="php" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-0"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #8502db;">use</span><span style="color: #555555;"> Illuminate\Support\Facades\</span><span style="color: #ff8c00;">Route</span><span style="color: #BFC7D5;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #ff8c00;">Route</span><span style="color: #008ec6;">::</span><span style="color: #0d42b6;">get</span><span style="color: #BFC7D5;">(</span><span style="color: #D9F5DD;">'</span><span style="color: #92e911;">/greeting</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">, </span><span style="color: #aa55e2;">function</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">()</span><span style="color: #BFC7D5;"> {</span></div><div class="line"><span style="color: #BFC7D5;">    </span><span style="color: #C792EA;">return</span><span style="color: #BFC7D5;"> </span><span style="color: #D9F5DD;">'</span><span style="color: #a2ff16;">Hello World</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">;</span></div><div class="line"><span style="color: #BFC7D5;">});</span></div></code></pre><button id="clipButton-0" class="md:block hidden copyBtn" aria-label="Copy to Clipboard" title="Copy to Clipboard" data-clipboard-target="#clipText-0"><svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg></button>
+							</div>
+						</div>
+						<br><br>
+						<div class="media-heading-wrapper">
+							<h1 class="media-heading">The Default Route Files</h1>
+						</div>
+						<br>
+						<div class="media-body">
+							<p>All Laravel routes are defined in your route files, which are located in the <code>routes</code> directory. These files are automatically loaded by your application's <code>App\Providers\RouteServiceProvider</code>. The <code>routes/web.php</code> file defines routes that are for your web interface. These routes are assigned the <code>web</code> middleware group, which provides features like session state and CSRF protection. The routes in <code>routes/api.php</code> are stateless and are assigned the <code>api</code> middleware group.</p>
+							<br>
+							<p>For most applications, you will begin by defining routes in your <code>routes/web.php</code> file. The routes defined in <code>routes/web.php</code> may be accessed by entering the defined route's URL in your browser. For example, you may access the following route by navigating to <code>http://example.com/user</code> in your browser:</p>
+							<br>
+							<div class="code-container">
+								<div class="relative code-block-wrapper"><pre><code data-theme="olaolu-palenight" data-lang="php" class="torchlight" style="background-color: #292D3E; --theme-selection-background: #7580B850;" id="clipText-1"><!-- Syntax highlighted by torchlight.dev --><div class="line"><span style="color: #970cf3;">use</span><span style="color: #0f63f3;"> App\Http\Controllers\</span><span style="color: #ff8f05;">UserController</span><span style="color: #1666f1;">;</span></div><div class="line">&nbsp;</div><div class="line"><span style="color: #fb9314;">Route</span><span style="color: #05b8ff;">::</span><span style="color: #0a52ec;">get</span><span style="color: #3571d8;">(</span><span style="color: #D9F5DD;">'</span><span style="color: #97f40b;">/user</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">, [</span><span style="color: #f28e13;">UserController</span><span style="color: #03b8ff;">::</span><span style="color: #970ff1;">class</span><span style="color: #BFC7D5;">, </span><span style="color: #D9F5DD;">'</span><span style="color: #97ef12;">index</span><span style="color: #D9F5DD;">'</span><span style="color: #BFC7D5;">]);</span></div></code></pre><button id="clipButton-1" class="md:block hidden copyBtn" aria-label="Copy to Clipboard" title="Copy to Clipboard" data-clipboard-target="#clipText-1"><svg class="fill-current h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"></path><path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z"></path></svg></button></div>
+						</div>
+
+						<p>Routes defined in the <code>routes/api.php</code> file are nested within a route group by the <code>RouteServiceProvider</code>. Within this group, the <code>/api</code> URI prefix is automatically applied so you do not need to manually apply it to every route in the file. You may modify the prefix and other route group options by modifying your <code>RouteServiceProvider</code> class.</p>
+						</div>
+							</div>
 						</div>
 					</div>
+					<br><br>
 				</div>
 			</div>
 		</div>
@@ -162,7 +193,7 @@
 			<div class="row">
 				<div class="col-md-12 text-center">
 					<p class="wow bounceIn" data-wow-offset="50" data-wow-delay="0.3s">
-						Copyright &copy; 2023 Faizi Rahman Syawli</p>
+						Copyright &copy; 2024 TutorLaravel</p>
 				</div>
 			</div>
 		</div>
